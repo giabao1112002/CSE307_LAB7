@@ -17,16 +17,21 @@
         }else{
             document.getElementById('nameerror').innerHTML="";
         }
+
         if (mail == "") {
             document.getElementById('mailerror').innerHTML="Please Provide your mail";
         }else{
             document.getElementById('mailerror').innerHTML="";
         }
+
         if (pass == "") {
             document.getElementById('passerror').innerHTML="Please Provide your password";
+        }else if(pass.length>6){
+            document.getElementById('passerror').innerHTML="Too long";
         }else{
             document.getElementById('passerror').innerHTML="";
         }
+
         if (!(passcon == pass)) {
             document.getElementById('passconerror').innerHTML="It does not match your password";
         }else{
