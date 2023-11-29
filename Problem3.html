@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Change() {
+            const p = document.querySelector('.example');
+            p.style.backgroundColor = "red";
+            p.style = "font-size: larger;background-color:yellow;color: black;width: 250px;";
+            
+
+
+            const link = document.querySelectorAll('.link');
+            for(let i=0;i<link.length;i++){
+                link[i].style.border = "3px solid red";
+            }
+
+            const title=document.querySelectorAll('.title');
+                title.forEach(function(element) {
+                    element.style="color: red;"
+                })
+                
+            
+            
+        }
+    </script>
+</head>
+
+<body>
+    <p class="example" style="background-color:aqua;color: green; width: 250px;">
+        This is the first paragraph with class="example"
+    </p>
+    <p class="example" style="background-color:aqua;color: green; width: 250px;">
+        Another paragraph with class example 
+    </p>
+
+    <a href="" class="link">Link with targer attribute</a>
+    <br>
+    <a href="" class="link">Another link with targer attribute</a>
+
+    <br>
+    <h1 class="title" >Title</h1>
+    <h2 class="title" >Title</h2>
+    <button onclick="Change()">Change</button>
+</body>
+
+</html>

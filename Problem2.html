@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Change(){
+            const p= document.querySelector('.example');
+            p.style.backgroundColor = "red";
+            p.style="font-size: larger;background-color:yellow;color: black;width: 250px;";
+
+            const link =document.querySelector('.link')
+            link.style="border: 2px solid red;";
+        }
+    </script>
+    
+</head>
+<body>
+    <p class="example" style="background-color:aqua;color: green; width: 250px;">
+        This is the first paragraph with class="example"
+    </p>
+    <p>This is another paragraph</p>
+
+    <a href="" class="link" >Link with targer attribute</a>
+    <br>
+    <button onclick="Change()">Change</button>
+</body>
+</html>
