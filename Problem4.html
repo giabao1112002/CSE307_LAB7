@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="cssp4.css">
+    <script>
+        let books = [
+            {
+                "id": "1",
+                "title": "The Alchemist",
+                "image": "thealche.jpg",
+
+
+            },
+
+            {
+                "id": "2",
+                "title": "Learning How to learn",
+                "image": "learning.jpg",
+
+            },
+            {
+                "id": "3",
+                "title": "Thinking, Fast Slow",
+                "image": "thinkking.jpg",
+
+
+            }];
+        function showDetails1() {
+            document.getElementById('result').innerHTML = '';
+            document.getElementById('result').innerHTML +=
+                ` <div style='flex:30%'>
+                        <p id='title' onclick="close()">${books[0].title}</p>
+                        <img id='img' width=200 onclick="close()"
+                            src='${books[0].image}' />
+                        
+                    </div>`;
+        };
+        function showDetails2() {
+            document.getElementById('result').innerHTML = '';
+            document.getElementById('result').innerHTML +=
+                ` <div style='flex:30%'>
+                    <p id='title'>${books[1].title}</p>
+            <img id='img' width=200 onclick="close()"
+                src='${books[1].image}' />
+            
+        </div>`;
+        };
+        function showDetails3() {
+            document.getElementById('result').innerHTML = '';
+            document.getElementById('result').innerHTML +=
+                ` <div style='flex:30%'>
+            <p id='title'>${books[2].title}</p>
+            <img id='img' width=200 onclick="close()"
+                src='${books[2].image}' />
+            
+        </div>`;
+        };
+        function close() {
+            var close = document.getElementById('img');
+            close.style.display = 'none';
+        }
+
+    </script>
 </head>
-<body>
-    
+
+<body onload="showDetails1">
+    <center>
+        <h2>Tabbed Image Gallery</h2>
+        <div class="content">
+            <img src="thealche.jpg" alt="" onclick="showDetails1()">
+            <img src="learning.jpg" alt="" onclick="showDetails2()">
+            <img src="thinkking.jpg" alt="" onclick="showDetails3()">
+        </div>
+        <div id="result"> </div>
+    </center>
 </body>
+
 </html>

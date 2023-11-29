@@ -1,0 +1,7 @@
+.content img{
+    width: 200px;
+    height: 200px;
+}
+.content :hover{
+    transform: scale(1.1);
+}
